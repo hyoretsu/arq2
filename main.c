@@ -1,3 +1,4 @@
+// Grupo: Aran Leite de Gusmão (Lembrar de passar o número inicial como argumento)
 #include <omp.h>
 #include <stdalign.h>
 #include <stdio.h>
