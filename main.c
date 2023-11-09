@@ -1,4 +1,4 @@
-// Grupo: Aran Leite de Gusmão (Lembrar de passar o número inicial como argumento)
+// Grupo: Aran Leite de Gusmão
 #include <omp.h>
 #include <stdalign.h>
 #include <stdio.h>
@@ -8,13 +8,13 @@
 #define BLOCK_SIZE 64
 #define THREADS_NUM 4
 
-int main(int argc, char* argv[]) {
-    if (argc != 2) {
-        return 1;
-    }
+int main() {
+    int initialNumber;
+
+    printf("Digite um número inicial: ");
+    scanf("%d", &initialNumber);
 
     alignas(64) int inputArray[ARR_SIZE], outputArray[ARR_SIZE];
-    int initialNumber = atoi(argv[1]);
 
     if (!initialNumber || initialNumber <= 0) {
         return 1;
